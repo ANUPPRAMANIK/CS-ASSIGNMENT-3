@@ -2,25 +2,25 @@
 #include<string.h>
 #include<cmath>
 using namespace std;
-int hex_to_dec(char hex[]) {
-	int i,len,dec=0;
-	for(len=0;hex[len]!='\0';len++);
-	for(i=0;hex[i]!='\0';i++,len--)
+int a(char b[]) {
+	int c,d,e=0;
+	for(d=0;b[d]!='\0';d++);
+	for(c=0;b[c]!='\0';c++,d--)
 	{
-		if(hex[i]>='0'&&hex[i]<='9')
-		dec=dec+(hex[i]-'0')*pow(16,len-1);
-		if(hex[i]>='A'&&hex[i]<='F')
-		dec=dec+(hex[i]-55)*pow(16,len-1); 
-		if(hex[i]>='a'&&hex[i]<='f') 
-		dec=dec+(hex[i]-87)*pow(16,len-1);
+		if(b[c]>='0'&&b[c]<='9')
+		e=e+(b[c]-'0')*pow(16,d-1);
+		if(b[c]>='A'&&b[c]<='F')
+		e=e+(b[c]-55)*pow(16,d-1); 
+		if(b[c]>='a'&&b[c]<='f') 
+		e=e+(b[c]-87)*pow(16,d-1);
 		}
-		return dec;
+		return e;
 		}
 main() {
-	char hex[20],c; 
+	char b[20],c; 
 	int n;
 	cout<<" enter a hexadecimal number ";
-	cin>>hex;
-	cout<<" \nequivalent decimal value: "<<hex_to_dec(hex);
+	cin>>b;
+	cout<<" \nequivalent decimal value: "<<a(b);
 	return 0;
 }
