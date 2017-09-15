@@ -2,40 +2,40 @@
 #include<string> 
 using namespace std;
 main()  {
-	int hexDigitToBinary[22]={0,1,10,11,100,101,110,111,1000,1001,1010,1011,1100,1101,1110,1111,1010,1011,1100,1101,1110,1111};
-	char hexDigits[22]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','a','b','c','d','e','f'};
-	char hexadecimal[30];
-	long long binary=0,octal;
-	int i=0,j,index=0,multiple=1,threeDig;
+	int a[22]={0,1,10,11,100,101,110,111,1000,1001,1010,1011,1100,1101,1110,1111,1010,1011,1100,1101,1110,1111};
+	char b[22]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','a','b','c','d','e','f'};
+	char c[30];
+	long long d=0,e;
+	int f=0,g,h=0,i=1,j;
 	cout<<" enter a hexadecimal number ";
-	cin>>hexadecimal;
-	for(i=0;hexadecimal[i]!='\0';i++)
+	cin>>c;
+	for(f=0;c[f]!='\0';f++)
 	{
-		for(j=0;j<22;j++)
+		for(g=0;g<22;g++)
 		{
-			if(hexDigits[j]==hexadecimal[i])
+			if(b[g]==c[f])
 			{
-				binary=binary*10000+hexDigitToBinary[j];
+				d=d*10000+a[g];
 				}
 				}
 				}
-				int num,dec=0,base=1,rem;
-				num=binary;
-				while(num>0)
+				int k,l=0,m=1,n;
+				k=d;
+				while(k>0)
 				{
-					rem=num%10;
-					dec=dec+rem*base;
-					base=base*2;
-					num=num/10;
+					n=k%10;
+					l=l+n*m;
+					m=m*2;
+					k=k/10;
 					}
-					int oct=0;
-					i=1;
-					while(dec!=0)
+					int o=0;
+					f=1;
+					while(l!=0)
 					{
-						rem=dec%8;
-						dec/=8;
-						oct+=rem*i;
-						i*=10;
+						n=l%8;
+						l/=8;
+						o+=n*f;
+						f*=10;
 						}
-						cout<<" \nthe required octal digit is: "<<oct;
+						cout<<" \nthe required octal digit is: "<<o;
 }
